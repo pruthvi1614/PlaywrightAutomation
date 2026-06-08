@@ -23,11 +23,11 @@ test("Add product to cart validation",{tag:'@smoke'}, async ({ page }) => {
     await dashboardPage.addProductToCartByProductName(productName)
     await expect(dashboardPage.addToCartSuccessMsg).toHaveText("Product Added To Cart")
     await expect(dashboardPage.cartCount).toHaveCount(cartCount + 1)
-    console.log("Product to cart validation")
+    console.log("--Product to cart validation--")
 })
 
 test("@smoke View product details page", async ({ page }) => {
     await dashboardPage.viewProductDetailsByProductName(productName)
     expect(dashboardPage.viewPageProductName).toHaveText(productName)
-    console.log("View product page validation")
+    console.log("--View product page validation--")
 })
