@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "fulltest": "npx playwright test",
+    "dashboardtest": "npx playwright test tests/dashboardtest.spec.ts",
     "allure-reports": "allure serve allure-results",
-    "clean-allure-reports": "Remove-Item -Recurse -Force allure-results -ErrorAction SilentlyContinue"
+    "clean-allure-reports": "Remove-Item -Recurse -Force allure-results -ErrorAction SilentlyContinue",
+    "smoke":"npx playwright test -g smoke "
+
   },
   "keywords": [],
   "author": "",
