@@ -8,8 +8,7 @@
     "dashboardtest": "npx playwright test tests/dashboardtest.spec.ts",
     "allure-reports": "allure serve allure-results",
     "clean-allure-reports": "Remove-Item -Recurse -Force allure-results -ErrorAction SilentlyContinue",
-    "smoke":"npx playwright test -g smoke "
-
+    "smoke": "npx playwright test -g smoke "
   },
   "keywords": [],
   "author": "",
@@ -18,6 +17,7 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.1",
+    "allure-js-commons": "^3.9.0",
     "allure-playwright": "^3.9.0",
     "xlsx": "^0.18.5"
   },

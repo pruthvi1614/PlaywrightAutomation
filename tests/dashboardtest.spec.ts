@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { LoginPage } from '../pages/LoginPage'
 import { DashboardPage } from '../pages/DashboardPage'
+import * as allure from "allure-js-commons";
 
 let url = "https://rahulshettyacademy.com/client"
 const username = "raj.raj123@gmail.com"
@@ -18,7 +19,9 @@ test.beforeEach(async ({ page }) => {
     await expect(loginPage.loginSuccessMessage).toBeVisible()
 })
 
-test("Add product to cart validation",{tag:'@smoke'}, async ({ page }) => {
+test("Add product to cart validation", { tag: '@smoke' }, async ({ page }) => {
+    await allure.feature("Cart");
+    await allure.story("Add Product");
     let cartCount = await dashboardPage.getCartCount()
     await dashboardPage.addProductToCartByProductName(productName)
     await expect(dashboardPage.addToCartSuccessMsg).toHaveText("Product Added To Cart")
@@ -27,7 +30,9 @@ test("Add product to cart validation",{tag:'@smoke'}, async ({ page }) => {
 })
 
 test("@smoke View product details page", async ({ page }) => {
+    await allure.feature("Product");
+    await allure.story("View Details");
     await dashboardPage.viewProductDetailsByProductName(productName)
-    expect(dashboardPage.viewPageProductName).toHaveText(productName)
+    await expect(dashboardPage.viewPageProductName).toHaveText(productName)
     console.log("--View product page validation--")
 })
