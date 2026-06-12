@@ -5,3 +5,12 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Allure
+/test-reports/
+/allure-results/
+/allure-report/
+
+# Optional
+*.webm
+*.zip
