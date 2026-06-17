@@ -19,10 +19,13 @@
     "@types/node": "^25.9.1",
     "allure-js-commons": "^3.9.0",
     "allure-playwright": "^3.9.0",
+    "dotenv": "^17.4.2",
     "xlsx": "^0.18.5"
   },
   "dependencies": {
     "@faker-js/faker": "^9.9.0",
-    "npm": "^11.16.0"
+    "@types/prompt-sync": "^4.2.3",
+    "npm": "^11.16.0",
+    "prompt-sync": "^4.2.0"
   }
 }

@@ -13,6 +13,7 @@ test('Verify check box', async ({ page }) => {
     // }
     await expect(checkbox).toBeChecked({ checked: true })
     await checkbox.uncheck()
+    await expect(checkbox).not.toBeChecked()
     await expect(checkbox).toBeChecked({ checked: false })
 })
 
