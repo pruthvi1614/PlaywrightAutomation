@@ -88,5 +88,5 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 
-  globalSetup: require.resolve('./global-setup')
+  //globalSetup: require.resolve('./global-setup')
 });
