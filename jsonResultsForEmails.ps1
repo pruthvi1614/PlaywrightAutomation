@@ -10,4 +10,4 @@ Total Tests: $total
 Passed: $passed
 Failed: $failed
 Skipped: $skipped
-"@ | Set-Content "$PSScriptRoot\test-summary.txt" -Encoding UTF8
+"@ | Out-File "$PSScriptRoot\test-summary.txt" -Encoding ascii
